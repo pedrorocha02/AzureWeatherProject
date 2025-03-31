@@ -1,14 +1,14 @@
 # Azure-Based Weather Data Processing Project
 
 ## Overview
-This project utilizes Microsoft Azure to retrieve and process weather data from the OpenWeatherMap API. The system is designed to ingest, store, process, and analyze weather data efficiently using a producer/subscriber strategy. The architecture involves multiple Azure services such as **Event Hubs**, **Blob Storage**, and **Azure SQL**, along with **PySpark** for data processing and **Power BI** for data visualization.
+This project utilizes Microsoft Azure to retrieve and process weather data from the OpenWeatherMap API. The system is designed to ingest, store, process, and analyze weather data efficiently using a producer/subscriber strategy. The architecture involves multiple Azure services such as **Event Hubs**, **Blob Storage**, and **Azure SQL**, along with **PySpark** for data processing and **Power BI** for data visualization and manipulationss.
 
 ## System Architecture
 *(Insert system architecture image here)*
 TO BE ADDED...
 
 This environment was built around the creation of a common **Resourse Group** in Azure, where all the compoments coexist in the same enviroment.
-This allowed for a better organization and simplification of the setup process.
+This allowed a better organization and simplification of the setup process.
 
 
 ## Required Environment Variables
@@ -26,7 +26,7 @@ Ensure these variables are securely stored in **Azure Key Vault** or in an **env
 - **Notebook #1 (Data Producer)**:
   - Fetches real-time weather data from OpenWeatherMap API.
   - Formats and structures the retrieved data.
-  - Sends raw data (JSON format) to an Azure Event Hubs topic (`weather-data`) , simulating a Kafka-based queue system.
+  - Sends raw data (JSON format) to an Azure Event Hubs topic (`weather-data`) , creating a Kafka-based queue system.
 
 - **Notebook #2 (Data Subscriber)**:
   - Listens to the Event Hubs stream for new incoming weather data.
@@ -56,13 +56,13 @@ Ensure these variables are securely stored in **Azure Key Vault** or in an **env
   - Temperature trends over time.
   - Humidity and pressure variations.
   - Geographic weather patterns.
-  - Anomaly detection for extreme weather conditions.
+  - City social stats overview.
 
 ## Future Improvements
 - Implement **synchronization** between Notebook #1 and Notebook #2 to improve efficiency and avoid data loss.
 - Enhance **real-time analytics** by integrating Azure Stream Analytics for faster processing.
 - Automate **data ingestion and transformation** using Azure Data Factory pipelines or through Databricks Jobs.
-- Improve **Power BI dashboard interactivity** with drill-through reports and dynamic filtering, by adding more cities.
+- Improve **Power BI dashboard interactivity** with drill-through reports and dynamic filtering, and by adding more cities.
 
 ## Conclusion
 This project demonstrates a scalable and cloud-based approach to weather data processing using Azure services. By leveraging Azure Event Hubs, Blob Storage, Azure SQL, and Power BI, it ensures efficient data ingestion, processing, and visualization while maintaining security and flexibility. This architecture provides a foundation for future enhancements, where new features and improvements to the overall system can be implemented.
