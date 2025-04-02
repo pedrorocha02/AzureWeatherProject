@@ -3,9 +3,8 @@
 ## Overview
 This project utilizes Microsoft Azure to retrieve and process weather data from the OpenWeatherMap API. The system is designed to ingest, store, process, and analyze weather data efficiently using a producer/subscriber strategy. The architecture involves multiple Azure services such as **Event Hubs**, **Blob Storage**, and **Azure SQL**, along with **PySpark** for data processing and **Power BI** for data visualization and manipulationss.
 
-## System Architecture
-*(Insert system architecture image here)*
-TO BE ADDED...
+## System Pipeline
+![System Architecture](./azurepipeline.svg)
 
 This environment was built around the creation of a common **Resourse Group** in Azure, where all the compoments coexist in the same enviroment.
 This allowed a better organization and simplification of the setup process.
@@ -50,9 +49,10 @@ Ensure these variables are securely stored in **Azure Key Vault** or in an **env
   - Live data updates ensure up-to-date reporting.
 - **Additional Excel Files:**
   - Datasets containing stats about some of the main cities in Portugal and a detailed description about the weather status, given a certain id. 
-  - Used to explore DAX and Power Query functionalities for additional data transformation.
-  - Helps enrich the dashboard by integrating external datasets.
+  - Used to explore **DAX** and **Power Query** functionalities for additional data transformation.
+  - Helps enrich the dashboard by integrating and manipulating external datasets and models.
 - **Key Metrics Visualized:**
+  - Latest registered weather update.
   - Temperature trends over time.
   - Humidity and pressure variations.
   - Geographic weather patterns.
