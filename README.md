@@ -4,7 +4,7 @@
 This project utilizes Microsoft Azure to retrieve and process weather data from the OpenWeatherMap API. The system is designed to ingest, store, process, and analyze weather data efficiently using a producer/subscriber strategy. The architecture involves multiple Azure services such as **Event Hubs**, **Blob Storage**, and **Azure SQL**, along with **PySpark** for data processing and **Power BI** for data visualization and manipulationss.
 
 ## System Pipeline
-![System Architecture](./azurepipeline.svg)
+![System Architecture](./azurepipeline.png)
 
 This environment was built around the creation of a common **Resourse Group** in Azure, where all the compoments coexist in the same enviroment.
 This allowed a better organization and simplification of the setup process.
