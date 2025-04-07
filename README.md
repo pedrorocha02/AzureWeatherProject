@@ -58,6 +58,9 @@ Ensure these variables are securely stored in **Azure Key Vault** or in an **env
   - Geographic weather patterns.
   - City social stats overview.
 
+## Dashboard Image
+![System Architecture](.dashbordImages\dashboard_img_eng.PNG)
+
 ## Future Improvements
 - Implement **synchronization** between Notebook #1 and Notebook #2 to improve efficiency and avoid data loss.
 - Enhance **real-time analytics** by integrating Azure Stream Analytics for faster processing.
