@@ -1,0 +1,2 @@
+I configured Github inside Databricks, and not inside the Azure Portal.
+I needed to generate a Github access token to access my github repository.
