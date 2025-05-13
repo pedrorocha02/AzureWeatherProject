@@ -64,7 +64,7 @@ Ensure these variables are securely stored in **Azure Key Vault** or in an **env
 ## Future Improvements
 - Implement **synchronization** between Notebook #1 and Notebook #2 to improve efficiency and avoid data loss.
 - Enhance **real-time analytics** by integrating Azure Stream Analytics for faster processing.
-- Automate **data ingestion and transformation** using Azure Data Factory pipelines or through Databricks Jobs.
+- Automate **data ingestion and transformation** using Azure Data Factory pipelines or through **Databricks Jobs**.
 - Improve **Power BI dashboard interactivity** with drill-through reports and dynamic filtering, and by adding more cities.
 
 ## Conclusion
