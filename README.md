@@ -8,6 +8,8 @@ This project utilizes Microsoft Azure to retrieve and process weather data from 
 
 This environment was built around the creation of a common **Resourse Group** in Azure, where all the compoments coexist in the same enviroment.
 This allowed a better organization and simplification of the setup process.
+This pipeline was built around the creation of a **Data LakeHouse** that combines both raw and structured data. 
+We also followed some of the **Medallion Architecture** patterns (by using <span style="color:#cd7f32">BRONZE</span>, <span style="color:#c0c0c0">SILVER</span> and <span style="color:#ffd700">GOLD</span> terms) to indicate stages and improvements on the overall **Data Quality**(See Above).
 
 
 ## Required Environment Variables
@@ -22,19 +24,19 @@ Ensure these variables are securely stored in **Azure Key Vault** or in an **env
 
 ## Data Flow and Processing
 ### **1. Data Ingestion (Notebook #1 & #2)**
-- **Notebook #1 (Data Producer)**:
+- **Notebook #1 (Data Producer) - <span style="color:#cd7f32">BRONZE</span>**:
   - Fetches real-time weather data from OpenWeatherMap API.
   - Formats and structures the retrieved data.
   - Sends raw data (JSON format) to an Azure Event Hubs topic (`weather-data`) , creating a Kafka-based queue system.
 
-- **Notebook #2 (Data Subscriber)**:
+- **Notebook #2 (Data Subscriber) - <span style="color:#c0c0c0">SILVER</span>**: 
   - Listens to the Event Hubs stream for new incoming weather data.
   - Retrieves the raw JSON data from the Event Hubs topic.
   - Stores the data in Azure Blob Storage:
     - **Raw JSON storage:** Saves incoming data in a blob container (`weather-data`).
     - **Parquet file storage:** Aggregates raw data into a structured Parquet file (`weather-data.parquet`) for efficient storage and querying.
 
-### **2. Data Processing and Storage (Notebook #3)**
+### **2. Data Processing and Storage (Notebook #3) - <span style="color:#ffd700">GOLD</span>** 
 - **Data Retrieval:** The raw Parquet file is retrieved from Azure Blob Storage.
 - **Schema Definition:** A structured schema is defined to ensure consistency and validity of the data.
 - **Transformation and Cleaning:**
