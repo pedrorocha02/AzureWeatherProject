@@ -6,10 +6,10 @@ This project utilizes Microsoft Azure to retrieve and process weather data from 
 ## System Pipeline
 ![System Architecture](./azurepipeline.svg)
 
-This environment was built around the creation of a common **Resourse Group** in Azure, where all the compoments coexist in the same enviroment.
-This allowed a better organization and simplification of the setup process.
-This pipeline was built around the creation of a **Data LakeHouse** that combines both raw and structured data. 
-We also followed some of the **Medallion Architecture** patterns (by using <span style="color:#cd7f32">BRONZE</span>, <span style="color:#c0c0c0">SILVER</span> and <span style="color:#ffd700">GOLD</span> terms) to indicate stages and improvements on the overall **Data Quality**(See Above).
+- This environment was built around the creation of a common **Resourse Group** in Azure, where all the compoments coexist in the same enviroment.
+- This allowed a better organization and simplification of the setup process.
+- The pipeline was built around the creation of a **Data LakeHouse** that combines both raw and structured data. 
+- I also followed some of the **Medallion Architecture** patterns (by using <span style="color:#cd7f32">BRONZE</span>, <span style="color:#c0c0c0">SILVER</span> and <span style="color:#ffd700">GOLD</span> terms) to indicate stages and improvements on the overall **Data Quality** (See Above).
 
 
 ## Required Environment Variables
