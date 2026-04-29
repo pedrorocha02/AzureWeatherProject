@@ -1,7 +1,7 @@
-# Azure-Based Weather Data Processing Project
+# Azure/Databricks Weather Data Processing Project
 
 ## Overview
-This project utilizes Microsoft Azure to retrieve and process weather data from the OpenWeatherMap API. The system is designed to ingest, store, process, and analyze weather data efficiently using a producer/subscriber strategy. The architecture involves multiple Azure services such as **Event Hubs**, **Blob Storage**, and **Azure SQL**, along with **PySpark** for data processing and **Power BI** for data visualization and manipulationss.
+This project utilizes Microsoft Azure and Databricks to retrieve and process weather data from the OpenWeatherMap API. The system is designed to ingest, store, process, and analyze weather data efficiently using a producer/subscriber strategy. The architecture involves multiple Azure services such as **Event Hubs**, **Blob Storage**, and **Azure SQL**, along with **PySpark** inside a series of **Jupyter Notebooks** for data processing that run on a **Databricks** cluster. **Power BI** is used for data visualization and dashboard construction.
 
 ## System Pipeline
 ![System Architecture](./azurepipeline.svg)
